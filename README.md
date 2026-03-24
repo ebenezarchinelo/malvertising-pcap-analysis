@@ -37,11 +37,15 @@ and document C2 activity for an incident report.
 
 ## Methodology
 1. Loaded pcap into Wireshark and reviewed Protocol Hierarchy for traffic breakdown
-2. Used DHCP and NetBIOS traffic to identify the infected host
-3. Filtered DNS queries to trace the malware delivery domain
-4. Reviewed HTTP objects to confirm malware download
-5. Used Statistics > Conversations to identify repeated external connections indicative of C2 beaconing
-6. Cross-referenced findings with Unit 42 threat intel IOC list
+2. Used Statistics > Conversations to identify conversatyions with highest bytes.
+3. Used VirusTotal to check cpnversing IP adress and found out that many vendors flagged it as malicious.
+
+4. 
+5. Used DHCP and NetBIOS traffic to identify the infected host
+6. Filtered DNS queries to trace the malware delivery domain
+7. Reviewed HTTP objects to confirm malware download
+8. Used Statistics > Conversations to identify repeated external connections indicative of C2 beaconing
+9. Cross-referenced findings with Unit 42 threat intel IOC list
 
 ---
 
@@ -55,3 +59,24 @@ and document C2 activity for an incident report.
 | Hostname | DESKTOP-L8C5GSJ |
 | Windows Username | shutchenson |
 
+<img width="1918" height="982" alt="host name" src="https://github.com/user-attachments/assets/d69afa43-773c-4a84-a09c-1ffcb8eb9c05" />
+
+<img width="1888" height="981" alt="username" src="https://github.com/user-attachments/assets/40ccad20-0008-4eb2-8d42-3e8dfb6c582b" />
+
+> *Caption: DHCP, NetBIOS and Kerberos (KRB5) traffic used to identify the infected host, hostname, and username*
+
+---
+### Infection Vector
+| Detail | Value |
+|---|---|
+| Attack Type | Malvertising — fake software delivery |
+| Fake Site | authenticatoor.org (typosquatting Google Authenticator) |
+| Delivery Method | User searched for Google Authenticator, clicked malicious ad, downloaded fake installer |
+
+
+> ![authrnticatoor](https://github.com/user-attachments/assets/4ca32718-1904-45a9-a5f4-8601d1761f90)
+> *Caption: Screenshot of the fake Google Authenticator page served at authenticatoor.org*
+
+
+<img width="1898" height="1011" alt="aunthenticatoor" src="https://github.com/user-attachments/assets/f9091e08-4dd9-48d0-8ff0-77a2fba383fd" />
+ > *Caption: DNS query and HTTP traffic showing the redirect to the fake download page*
