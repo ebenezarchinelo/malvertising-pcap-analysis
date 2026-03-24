@@ -63,7 +63,7 @@ and document C2 activity for an incident report.
 
 <img width="1888" height="981" alt="username" src="https://github.com/user-attachments/assets/40ccad20-0008-4eb2-8d42-3e8dfb6c582b" />
 
-> *Caption: DHCP, NetBIOS and Kerberos (KRB5) traffic used to identify the infected host, hostname, and username*
+> Caption: DHCP, NetBIOS and Kerberos (KRB5) traffic used to identify the infected host, hostname, and username
 
 ---
 ### Infection Vector
@@ -75,11 +75,11 @@ and document C2 activity for an incident report.
 
 
 > ![authrnticatoor](https://github.com/user-attachments/assets/4ca32718-1904-45a9-a5f4-8601d1761f90)
-> *Caption: Screenshot of the fake Google Authenticator page served at authenticatoor.org*
+> Caption: Screenshot of the fake Google Authenticator page served at authenticatoor.org
 
 
 <img width="1898" height="1011" alt="aunthenticatoor" src="https://github.com/user-attachments/assets/f9091e08-4dd9-48d0-8ff0-77a2fba383fd" />
- > *Caption: DNS query and HTTP traffic showing the redirect to the fake download page*
+ > Caption: DNS query and HTTP traffic showing the redirect to the fake download page
 
 
 ---
@@ -137,7 +137,7 @@ a833f27c2bb4cad31344e70386c44b5c221f031d7cd2f2a6b8601919e790161e
 
 ## Protocol Hierarchy Overview
 > <img width="1912" height="1021" alt="protocol" src="https://github.com/user-attachments/assets/bbf45ad2-3df8-47b7-93ef-fc82913f3032" />
-> *Caption: Wireshark Protocol Hierarchy showing traffic composition across the full pcap*
+> Caption: Wireshark Protocol Hierarchy showing traffic composition across the full pcap
 
 
 ---
