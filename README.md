@@ -86,14 +86,14 @@ and document C2 activity for an incident report.
 
 
  ## Results
-| Finding | My Analysis | Official Answer | Match? |
-|---|---|---|---|
-| Victim IP | ... | 10.1.17.215 | 
-| MAC Address | ... | 00:d0:b7:26:4a:74 | 
-| Hostname | ... | DESKTOP-L8C5GSJ |
-| Username | ... | shutchenson |
-| Fake Domain | ... | authenticatoor.org |
-| C2 IPs | ... | 5.252.153.241, 45.125.66.32, 45.125.66.252 |
+| Findings | Answer |
+|---|---|
+| Victim IP | 10.1.17.215 | 
+| MAC Address | 00:d0:b7:26:4a:74 | 
+| Hostname | DESKTOP-L8C5GSJ |
+| Username | shutchenson |
+| Fake Domain | authenticatoor.org |
+| C2 IPs | 5.252.153.241, 45.125.66.32, 45.125.66.252 |
 
 
 ---
