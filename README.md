@@ -36,16 +36,16 @@ and document C2 activity for an incident report.
 ---
 
 ## Methodology
-1. Loaded pcap into Wireshark and reviewed Protocol Hierarchy for traffic breakdown
-2. Used Statistics > Conversations to identify conversatyions with highest bytes.
-3. Used VirusTotal to check cpnversing IP adress and found out that many vendors flagged it as malicious.
+1.	Loaded pcap into Wireshark and reviewed Protocol Hierarchy for traffic breakdown 
+2.	Used Statistics > Conversations to identify conversations with highest bytes 
+3.	Used VirusTotal to check conversing IP addresses and found that many vendors flagged them as malicious 
+4.	Applied http.request and dns display filters to trace traffic patterns and identify suspicious domains 
+5.	Used DHCP and NetBIOS traffic to identify the infected host 
+6.	Filtered DNS queries to trace the malware delivery domain 
+7.	Reviewed HTTP objects to confirm malware download 
+8.	Used Statistics > Conversations to identify repeated external connections indicative of C2 beaconing 
+9.	Cross-referenced findings with Unit 42 threat intel IOC list
 
-4. 
-5. Used DHCP and NetBIOS traffic to identify the infected host
-6. Filtered DNS queries to trace the malware delivery domain
-7. Reviewed HTTP objects to confirm malware download
-8. Used Statistics > Conversations to identify repeated external connections indicative of C2 beaconing
-9. Cross-referenced findings with Unit 42 threat intel IOC list
 
 ---
 
@@ -128,11 +128,13 @@ and document C2 activity for an incident report.
 | Username | shutchenson |
 
 
-### File Hashes Extracted from the Pcap
-b8ce40900788ea26b9e4c9af7efab533e8d39ed1370da09b93fcf72a16750ded
-a833f27c2bb4cad31344e70386c44b5c221f031d7cd2f2a6b8601919e790161e
-3448da03808f24568e6181011f8521c0713ea6160efd05bff20c43b091ff59f7 
+## File Hashes Extracted from the Pcap
 
+| Hash | Threat Label | File Name |
+|------|-------------|-----------|
+| `b8ce40900788ea26b9e4c9af7efab533e8d39ed1370da09b93fcf72a16750ded` | trojan.powershell/obfuse | 29842.ps1 |
+| `a833f27c2bb4cad31344e70386c44b5c221f031d7cd2f2a6b8601919e790161e` | trojan.powershell/malgent | pas.ps1 |
+| `3448da03808f24568e6181011f8521c0713ea6160efd05bff20c43b091ff59f7` | trojan.doina/malgent | TV |
 
 
 ## Protocol Hierarchy Overview
